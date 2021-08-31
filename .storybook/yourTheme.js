@@ -11,6 +11,4 @@ export default create({
   appContentBg: 'white',
   appBorderColor: 'grey',
   appBorderRadius: 4,
-  brandTitle: 'DS Pichincha',
-  brandImage: 'https://logodownload.org/wp-content/uploads/2020/04/banco-pichincha-logo-4.png',
 });
