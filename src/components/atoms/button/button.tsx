@@ -21,7 +21,7 @@ export class Button implements ComponentInterface {
     | 'secondary'
     | 'complementary'
     | 'tertiary'
-    | 'destructive' = 'secondary'
+    | 'destructive' = 'destructive'
   @Prop() public disabled: boolean = false
   @Prop() public href: string
   @Prop() public idelement: string
@@ -52,7 +52,7 @@ export class Button implements ComponentInterface {
             : null
         }
       >
-        Click me
+        Click on me new feature
       </button>
     )
   }
