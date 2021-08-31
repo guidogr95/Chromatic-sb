@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Design System Pichincha</title>
+
+  <link rel="stylesheet" type="text/css" href="/build/wc-design-pichincha.css" />
+
+  <script type="module" src="/build/wc-design-pichincha.esm.js"></script>
+  <script nomodule src="/build/wc-design-pichincha.js"></script>
+</head>
+
+<body>
+  <div style="width: 250px;">
+    <pichincha-select id-element="selectPichincha" placeholder="Seleccione un item ..." />
+  </div>
+
+  <div class="bp-mt-12" style="width: 350px;">
+    <pichincha-select id-element="bp-select-one" placeholder="Seleccione un tipo de documento ..." />
+  </div>
+
+  <div class="bp-mt-12">
+    <pichincha-select id-element="bp-select-two" />
+  </div>
+
+
+ 
+  <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Test 1" cancel-button-text="Close 1" open status="info" alert-title="SALUDOS" warning adjust-in>Texto alert message 1</pichincha-alert-message>
+  <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Test 2" cancel-button-text="Disable 2" open status="success" adjust-in>Texto alert message 1</pichincha-alert-message>
+  <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Test 3" open status="error" adjust-in>Texto alert message 1</pichincha-alert-message>
+  <pichincha-alert-message variant="light" icon="ac_unit"  open status="warning" adjust-in>Texto alert message 1</pichincha-alert-message>
+  
+  <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Hola" open status="info" adjust-in>Texto alert message 1</pichincha-alert-message>
+
+  <div>
+    <pichincha-grid container>
+      <pichincha-grid item xs="6">
+        <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Hola" open status="info" adjust-in>Texto alert message 1</pichincha-alert-message>
+      </pichincha-grid>
+      <pichincha-grid item xs="6">
+        <pichincha-alert-message variant="light" icon="ac_unit" close-time=2000 accept-button-text="Hola" open status="error" adjust-in>Texto alert message 1</pichincha-alert-message>
+      </pichincha-grid>
+      <pichincha-grid item xs="3">
+        <pichincha-alert-message variant="light" icon="ac_unit" accept-button-text="Hola" open status="error" adjust-in>Texto alert message 1</pichincha-alert-message>
+      </pichincha-grid>
+    </pichincha-grid>
+  </div>
+
+  <radio-buttom-container>
+    <pichincha-radio-buttom name-element='hola' id-element='radio1' value='1' slot="header">
+      <pichincha-typography variant="bodyText" color="blue" weight="normal" weight_color="500" align="inherit">
+        Hola
+      </pichincha-typography>
+
+    </pichincha-radio-buttom>
+
+    <pichincha-radio-buttom name-element='hola' id-element='radio2' value='2' slot="header">
+      <pichincha-typography variant="bodyText" color="blue" weight="normal" weight_color="500" align="inherit">
+        como estas
+      </pichincha-typography>
+
+    </pichincha-radio-buttom>
+    <pichincha-radio-buttom name-element='hola' id-element='radio3' value='3' slot="header" disabled>
+      <pichincha-typography variant="bodyText" color="blue" weight="normal" weight_color="500" align="inherit">
+        ctodo bien s
+      </pichincha-typography>
+
+    </pichincha-radio-buttom>
+  </radio-buttom-container>
+  <pichincha-login code-error="2001"></pichincha-login>
+  <pichincha-login code-error="4"></pichincha-login>
+  <pichincha-login code-error="3"></pichincha-login>
+  <pichincha-login code-error="1"></pichincha-login>
+  <pichincha-brand type="logo"></pichincha-brand>
+  <pichincha-icon size="128px" color="darkCyan" type="--outlined" weight_color="900">adb</pichincha-icon>
+  <br />
+  <div style="padding: 50px">
+    <pichincha-tooltip text="Este es el texto ejemplo que mostrará el tooltip" position="right" text-align="right">
+
+      <span slot="item-body">Lorem Ipsum is simply dummy </span>
+      <span slot="item-text">Este es el texto ejemplo que mostrará el tooltip asdasd sd sad asd asdas das dsa dsa
+        dsd</span>
+    </pichincha-tooltip>
+  </div>
+
+  <pichincha-feedback call-me-back name-login='Santi'></pichincha-feedback>
+
+  <br />
+  <div style="padding: 50px">
+
+  </div>
+  <div style="height:200px">
+    <pichincha-table sticky="true"
+      dataheaders='[{"name": "Cat", "value": "Meow", "align": "left", "visible": true}, {"name": "Dog", "value": "Woof", "align": "center", "visible": true}, {"name": "id", "value": "id", "align": "center", "visible": true}]'
+      datarecords='[{ "Dog": "frack","Cat": "pepito","id":"1"},{ "Dog": "frack","Cat": "pepito","id":"1"},{ "Dog": "frack","Cat": "pepito","id":"1"},{ "Dog": "frack","Cat": "pepito","id":"1"}, {"Cat": "Sergio", "Dog": "ss","id":"2"},{"Cat": "dd", "Dog": "culo","id":"3"}]'
+      theme="discreet"></pichincha-table>
+  </div>
+  <pichincha-check-box id-element='hola'>
+    <pichincha-typography variant="bodyText" color="blue" weight="normal" weight_color="500" align="inherit">
+      Hola como estas
+    </pichincha-typography>
+  </pichincha-check-box>
+  <div style="padding: 10px 0px 10px 0px;">
+    <pichincha-switch id-element='switch' label-before="false" disabled="true" checked="true">
+      <pichincha-typography variant="body" color="blue" weight="normal" weight_color="500">
+        Label a la derecha del control, SIN pichincha-grid
+      </pichincha-typography>
+    </pichincha-switch>
+  </div>
+  <div style="padding: 10px 0px 10px 0px;">
+    <pichincha-grid container>
+      <pichincha-grid item md="4">
+        <pichincha-switch id-element='switch-one' label-before="false">
+          <pichincha-typography variant="body" color="blue" weight="normal" weight_color="500">
+            Label a la derecha del control, CON pichincha-grid
+          </pichincha-typography>
+        </pichincha-switch>
+      </pichincha-grid>
+      <pichincha-grid item md="4">
+        <pichincha-switch id-element='switch-two' label-before="true">
+          <pichincha-typography variant="body" color="blue" weight="normal" weight_color="500">
+            Label a la izquierda del control, CON pichincha-grid
+          </pichincha-typography>
+        </pichincha-switch>
+      </pichincha-grid>
+    </pichincha-grid>
+  </div>
+  <div style="padding: 10px 0px 10px 0px;">
+    <pichincha-switch id-element='switch-three' label-before="true" checked="true">
+      <pichincha-typography variant="body" color="blue" weight="normal" weight_color="500">
+        Label a la izquierda del control, SIN pichincha-grid
+      </pichincha-typography>
+    </pichincha-switch>
+  </div>
+  <pichincha-tabs activetab="Tab1">
+    <pichincha-tab slot="header" name="Tab1">Tab Uno</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab2">Tab Dos</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab3">Tab Tres</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab4">Tab Cuatro</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab5">Tab Cinco</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab6">Tab Seis</pichincha-tab>
+    <pichincha-tab slot="header" name="Tab7">Tab Siete</pichincha-tab>
+
+    <pichincha-tab-content slot='content' name='Tab1'>
+      <p>Contenido del Tab Uno</p>
+    </pichincha-tab-content>
+    <pichincha-tab-content slot='content' name='Tab2'>
+      <p>Contenido del Tab Dos</p>
+    </pichincha-tab-content>
+  </pichincha-tabs>
+
+  <pichincha-spinner size="100" border="4" class="bp-m-20"></pichincha-spinner>
+  <div style="background-color: aqua; cursor: pointer;height: 200px;">
+    <pichincha-typography weight_color="200"> holagg</pichincha-typography>
+  </div>
+  <pichincha-button color="tertiary" disabled="true">hola como estas</pichincha-button>
+
+  <pichincha-login></pichincha-login>
+  <pichincha-link variant="smallText" id="link-exitNocredit">
+    Deseo salir, lo decidiré luego
+  </pichincha-link>
+
+  <pichincha-tooltip>
+    <span slot="item-text">hola como estas </span>
+
+    <pichincha-link slot="item-body" id="link-exitNocredit">
+      Deseo salir, lo decidiré luego
+    </pichincha-link>
+
+  </pichincha-tooltip>
+  <pichincha-grid container>
+    <pichincha-grid item md="4">
+      <pichincha-input id-element="idInput" label="This is an input" placeholder="Type something"
+        normal-helper="Normal helper" />
+    </pichincha-grid>
+    </pichincha-tabs>
+    <pichincha-spinner size='100' border='4' class='bp-m-20'></pichincha-spinner>
+    <pichincha-typography weight_color='200'> holagg</pichincha-typography>
+    <pichincha-button color='tertiary' loading></pichincha-button>
+
+    <pichincha-grid item md="4">
+      <pichincha-input id="input-test" value="" show-icon-status="true" state="success" label="Disabled input"
+        placeholder="You can't type here" control-event />
+    </pichincha-grid>
+
+    <pichincha-grid item md="4">
+      <pichincha-input label="Código dactilar" placeholder="Escribe el código dactilar"
+        normal-helper="Esta al reverso de tu cédula" error-helper="Escribe un código dactilar válido" value="X2222S1222"
+        state="error" size="medium" max-length="10" show-icon-status="true" full-width />
+    </pichincha-grid>
+  </pichincha-grid>
+  <pichincha-box-selector id="boxSelector"
+    items='[{"idelement": "123", "titleitem":"Item test A"}, {"idelement": "456", "titleitem":"Item test B"}]'
+    item_selected="">
+
+  </pichincha-box-selector>
+  <pichincha-link variant="smallText" id="link-exitNocredit">
+    Deseo salir, lo decidiré luego
+  </pichincha-link>
+  <pichincha-link id="link-exitNocredit">
+    Deseo salir, lo decidiré luego,
+  </pichincha-link>
+
+  <pichincha-otp title-otp="Validación"
+    description="Confirma tu $transferencia ingresando el código de 6 números que llegará a tu correo electrónico jxxxxa@gmail.com y/o celular 09xxxxx651"
+    timer=30 status="normal" state-button="normal" error-code="" type-password />
+
+  <script>
+    const items = [
+      { label: 'AppVengers', value: '1' },
+      { label: 'Marketinators', value: '2' },
+      { label: 'Ducats', value: '3' },
+      { label: 'deUna!', value: '4' }
+    ]
+
+    const catalogue = [
+      { label: 'Cédula', value: 1 },
+      { label: 'Ruc', value: 2 },
+      { label: 'Pasaporte', value: 3 }
+    ]
+
+    const pichincha_select = document.querySelectorAll('pichincha-select')[0]
+    const pichincha_alert_message = document.querySelectorAll('pichincha-alert-message')[0]
+    const bp_select_one = document.querySelectorAll('pichincha-select')[1]
+    pichincha_select.items = items
+    bp_select_one.items = catalogue
+    window.addEventListener('appload', (evt) => {
+      console.log(evt)
+    })
+
+    pichincha_select.addEventListener('clickedItem', (e) => {
+      console.log('select emits ', e.detail)
+    })
+
+    pichincha_alert_message.addEventListener('clickAccept', (e) => {
+      console.log('select emits ')
+    })
+
+    bp_select_one.addEventListener('clickedItem', (e) => {
+      console.log('select emits ', e.detail)
+    })
+
+    const otp = document.querySelector('pichincha-otp')
+    document.addEventListener('clickResendCode', (e) => {
+      otp.setAttribute('state-resend', 'loading')
+      setInterval(function () {
+        otp.setAttribute('state-resend', 'success')
+        otp.setAttribute('timer', 30)
+      }, 3000)
+    })
+    document.addEventListener('clickContinue', (e) => {
+      otp.setAttribute('state-button', 'loading')
+      setInterval(function () {
+        otp.setAttribute('status', 'error')
+        otp.setAttribute('error-code', '1')
+        otp.setAttribute('state-button', 'normal')
+      }, 3000)
+    })
+    document.addEventListener('clickbutton', function funprueba(e) {
+      console.log(e);
+    });
+    document.getElementById("boxSelector").addEventListener("selectItem", function test(e) {
+      alert(e.detail);
+      const element = document.getElementById('boxSelector');
+      element.setAttribute('item_selected', `${e.detail}`);
+    });
+    document.getElementById('open-message').addEventListener('clickbutton', function funprueba(e) {
+      document.getElementById('message-bar').setAttribute('open', true)
+      document.getElementById("input-test").addEventListener('eventValue', function funprueba(e) {
+        console.log('eventValue', e);
+        document.getElementById("input-test").value = e.detail
+      });
+    })
+  </script>
+
+  <pichincha-avatar type="name" name="Pedro Hechevarría"></pichincha-avatar>
+  <pichincha-avatar size="xl" type="image"
+    src="https://upload.wikimedia.org/wikipedia/commons/0/02/Dakota_Fanning_Push_Premiere.jpg"></pichincha-avatar>
+  <pichincha-avatar size="xxl"></pichincha-avatar>
+</body>
+
+</html>
