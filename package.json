@@ -22,7 +22,8 @@
     "generate": "stencil generate",
     "lint": "eslint src/**/*.{ts,tsx}",
     "storybook": "stencil build && start-storybook -p 6006 -s ./dist",
-    "build-storybook": "stencil build && build-storybook -s ./dist -c .storybook -o build"
+    "build-storybook": "stencil build && build-storybook -s ./dist -c .storybook -o build",
+    "chromatic": "npx chromatic --project-token=162adfee08fb"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
